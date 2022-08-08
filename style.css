@@ -1,0 +1,193 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: norse-bold;
+  src: url(../fonts/Norse-Bold.otf);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+}
+
+.left-side > img {
+  width: 35vw;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.575);
+  width: 35vw;
+  height: 2em;
+  top: 10rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: white;
+  font-family: norse-bold;
+  letter-spacing: 0.5rem;
+}
+
+.logo > img {
+  height: 9rem;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  padding-left: 8rem;
+}
+
+.disclaimer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: left;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-flow: row wrap;
+}
+.form > p {
+  padding-bottom: 1rem;
+}
+
+li {
+  padding-bottom: 1.5rem;
+}
