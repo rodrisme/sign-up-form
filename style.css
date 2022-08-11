@@ -5,12 +5,6 @@ span,
 applet,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 pre,
@@ -128,24 +122,42 @@ table {
   src: url(../fonts/Norse-Bold.otf);
 }
 
+:root {
+  --main-font: "Quattrocento Sans", sans-serif;
+  --font-color: white;
+  --background-color: #191919;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 100vh;
-  overflow: hidden;
+  font-family: var(--main-font);
+  background-color: var(--background-color);
 }
 
 .container {
   display: flex;
+  gap: 5rem;
+  /* background-color: rgba(219, 219, 219, 0.226); */
+  box-sizing: border-box;
+  color: var(--font-color);
 }
 
-.left-side > img {
-  width: 35vw;
+.left-side {
+  background-image: url(images/background2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40vw;
   height: 100vh;
 }
 
 .logo {
-  position: absolute;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.575);
-  width: 35vw;
+  width: 40vw;
   height: 2em;
   top: 10rem;
   text-align: center;
@@ -162,32 +174,76 @@ body {
   height: 9rem;
 }
 
+.dummy-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 8vh;
+  width: 50vw;
+}
+
+.dummy-text > p {
+  margin-top: 4vh;
+}
+
 .right-side {
   display: flex;
   flex-direction: column;
-
-  justify-content: space-evenly;
-  padding-left: 8rem;
+  width: 60vw;
 }
 
-.disclaimer {
+.inputs {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  text-align: left;
+  background-color: #202020;
+  box-shadow: -5rem 0px 0px 0px #202020;
 }
 
-form {
+.left-inputs,
+.right-inputs {
   display: flex;
-  align-items: center;
-  gap: 4rem;
-  flex-flow: row wrap;
-}
-.form > p {
-  padding-bottom: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 14rem;
 }
 
-li {
-  padding-bottom: 1.5rem;
+.form {
+  margin-top: 10vh;
+}
+
+input {
+  border: 1px solid rgba(105, 105, 105, 0.267);
+  margin-bottom: 1.5rem;
+  width: 18rem;
+  height: 1.8rem;
+  border-radius: 5px;
+  padding-left: 8px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(75, 75, 253, 0.8);
+  box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.479);
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  border: none;
+  background-color: #2d4263;
+  padding: 15px 55px 15px 55px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin: 3vh 0 1vh 0;
+}
+.bottom > p > a {
+  text-decoration: none;
+  color: #c84b31;
+  font-weight: bold;
 }
