@@ -149,7 +149,7 @@ body {
 }
 
 .dummy-text {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-top: 8vh;
   width: 50vw;
@@ -242,6 +242,18 @@ button[type="submit"]:hover {
   font-weight: bold;
 }
 
-/* input:invalid {
-  border: 1px solid red;
-} */
+
+@media (max-height:768px) {
+
+  .bottom,
+  .button,
+  .dummy-text,
+  .inputs {
+    padding-left: 1.5rem;
+  }
+
+  .inputs {
+    background-color: var(--background-color);
+    box-shadow: none;
+  }
+}
