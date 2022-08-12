@@ -80,42 +80,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 @font-face {
   font-family: norse-bold;
@@ -126,6 +90,7 @@ table {
   --main-font: "Quattrocento Sans", sans-serif;
   --font-color: white;
   --background-color: #191919;
+  --inputs-background-color: #202020;
 }
 
 * {
@@ -139,9 +104,6 @@ body {
 
 .container {
   display: flex;
-  gap: 5rem;
-  /* background-color: rgba(219, 219, 219, 0.226); */
-  box-sizing: border-box;
   color: var(--font-color);
 }
 
@@ -170,7 +132,19 @@ body {
   letter-spacing: 0.5rem;
 }
 
-.logo > img {
+.image-credit {
+  text-align: center;
+  position: relative;
+  top: 97vh;
+}
+
+.image-credit a {
+  text-decoration: none;
+  text-decoration: underline;
+  color: azure;
+}
+
+.logo>img {
   height: 9rem;
 }
 
@@ -181,7 +155,7 @@ body {
   width: 50vw;
 }
 
-.dummy-text > p {
+.dummy-text>p {
   margin-top: 4vh;
 }
 
@@ -194,8 +168,8 @@ body {
 .inputs {
   display: flex;
   flex-direction: column;
-  background-color: #202020;
-  box-shadow: -5rem 0px 0px 0px #202020;
+  background-color: var(--inputs-background-color);
+  box-shadow: -1px 6px 20px -15px #838383;
 }
 
 .left-inputs,
@@ -211,7 +185,7 @@ body {
 }
 
 input {
-  border: 1px solid rgba(105, 105, 105, 0.267);
+  border: 1px solid #c84b31;
   margin-bottom: 1.5rem;
   width: 18rem;
   height: 1.8rem;
@@ -220,6 +194,14 @@ input {
   font-size: 1rem;
   margin-top: 0.3rem;
 }
+
+/* #password {
+  margin-bottom: 0.5rem;
+}
+/* .warning {
+  color: rgb(206, 32, 32);
+  font-size: 13px;
+} */
 
 input:focus {
   outline: none;
@@ -242,8 +224,24 @@ button[type="submit"] {
   color: white;
   margin: 3vh 0 1vh 0;
 }
-.bottom > p > a {
+
+button[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.bottom,
+.button,
+.dummy-text,
+.inputs {
+  padding-left: 5rem;
+}
+
+.bottom>p>a {
   text-decoration: none;
   color: #c84b31;
   font-weight: bold;
 }
+
+/* input:invalid {
+  border: 1px solid red;
+} */
